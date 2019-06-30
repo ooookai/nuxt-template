@@ -36,7 +36,13 @@ export default {
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
     '@nuxtjs/eslint-module',
+    '@nuxtjs/style-resources',
   ],
+
+  styleResources: {
+    // :warning: You cannot use path aliases here (~ and @)
+    scss: ['./assets/scss/*.scss'],
+  },
   /*
    ** Axios module configuration
    ** See https://axios.nuxtjs.org/options
