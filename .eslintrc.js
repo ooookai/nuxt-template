@@ -23,6 +23,7 @@ module.exports = {
     "no-debugger": process.env.NODE_ENV === "production" ? "error" : "off",
 
     'comma-dangle': ['warn', 'only-multiline'],
+    'arrow-parens': ['warn', 'as-needed'],
 
     'prettier/prettier': [
       'warn',
@@ -30,7 +31,9 @@ module.exports = {
         trailingComma: 'es5',
         singleQuote: true,
         semi: false,
-        },
+        arrowParens: 'avoid',
+      },
       ],
-    }
+    },
+
 }
