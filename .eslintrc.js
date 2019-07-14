@@ -8,11 +8,11 @@ module.exports = {
     parser: 'babel-eslint'
   },
   extends: [
-    'prettier',
-    'prettier/vue',
-    'plugin:prettier/recommended',
     '@nuxtjs',
-    'plugin:nuxt/recommended'
+    'plugin:nuxt/recommended',
+    'plugin:prettier/recommended',
+    'prettier',
+    'prettier/vue'
   ],
   plugins: [
     'prettier'
@@ -21,6 +21,8 @@ module.exports = {
   rules: {
     "no-console": process.env.NODE_ENV === "production" ? "error" : "off",
     "no-debugger": process.env.NODE_ENV === "production" ? "error" : "off",
+
+    'nuxt/no-cjs-in-config': 'off',
 
     'comma-dangle': ['warn', 'only-multiline'],
     'arrow-parens': ['warn', 'as-needed'],
@@ -33,7 +35,24 @@ module.exports = {
         semi: false,
         arrowParens: 'avoid',
       },
-      ],
-    },
+    ],
 
+    'vue/html-indent': ['warn', 2],
+    'vue/html-self-closing': 'off',
+
+    'vue/no-use-v-if-with-v-for': 'off',
+    'vue/no-unused-components': 'off',
+
+    'vue/max-attributes-per-line': [
+      2,
+      {
+        singleline: 5,
+        multiline: {
+          max: 3,
+          allowFirstLine: true,
+        },
+      },
+    ],
+
+  }
 }
