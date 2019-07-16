@@ -23,12 +23,17 @@ export default {
   /*
    ** Global CSS
    */
-  css: ['~/assets/css/tailwind.css'],
+  css: [
+    // css files
+    '@/assets/less/antd.less',
+    '@/assets/css/tailwind.css',
+  ],
   /*
    ** Plugins to load before mounting the App
    */
   plugins: [
     // '@/plugins/_',
+    '@/plugins/antd-ui',
     '@/plugins/vue-rx',
   ],
   /*
@@ -59,6 +64,11 @@ export default {
       plugins: {
         tailwindcss: './tailwind.config.js',
         'postcss-nested': {},
+      },
+    },
+    loaders: {
+      less: {
+        javascriptEnabled: true,
       },
     },
     /*
