@@ -27,6 +27,7 @@ export default {
     // css files
     '@/assets/less/antd.less',
     '@/assets/css/tailwind.css',
+    '@/assets/css/animate.css',
   ],
   /*
    ** Plugins to load before mounting the App
