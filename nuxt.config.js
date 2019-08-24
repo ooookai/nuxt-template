@@ -28,6 +28,7 @@ export default {
     '@/assets/less/antd.less',
     '@/assets/css/tailwind.css',
     '@/assets/css/animate.css',
+    '@fortawesome/fontawesome-svg-core/styles.css',
   ],
   /*
    ** Plugins to load before mounting the App
@@ -36,6 +37,7 @@ export default {
     // '@/plugins/_',
     '@/plugins/antd-ui',
     '@/plugins/vue-rx',
+    '@/plugins/fa-icon',
   ],
   /*
    ** Nuxt.js modules
@@ -61,6 +63,12 @@ export default {
    ** Build configuration
    */
   build: {
+    // improve build speed (beta)
+    // parallel: true,
+    cache: true,
+    // hardSource: true,
+    // // //
+
     postcss: {
       plugins: {
         tailwindcss: './tailwind.config.js',
