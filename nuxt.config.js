@@ -46,8 +46,17 @@ export default {
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
-    '@nuxtjs/eslint-module',
     '@nuxtjs/style-resources',
+  ],
+
+  /*
+   ** Nuxt.js dev-modules
+   */
+  buildModules: [
+    // Doc: https://github.com/nuxt-community/eslint-module
+    '@nuxtjs/eslint-module',
+    // Doc: https://github.com/nuxt-community/nuxt-tailwindcss
+    '@nuxtjs/tailwindcss',
   ],
 
   styleResources: {
@@ -71,7 +80,6 @@ export default {
 
     postcss: {
       plugins: {
-        tailwindcss: './tailwind.config.js',
         'postcss-nested': {},
       },
     },
@@ -83,6 +91,8 @@ export default {
     /*
      ** You can extend webpack config here
      */
-    extend(config, ctx) {},
+    extend(config, ctx) {
+      //
+    },
   },
 }
