@@ -1,4 +1,10 @@
 {
-  "eslint.validate": ["javascript", "html", { "language": "vue", "autoFix": true }],
-  "eslint.autoFixOnSave": true,
+  "eslint.validate": [
+    "javascript",
+    "html",
+    "vue"
+  ],
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
 }
