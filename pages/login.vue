@@ -48,6 +48,12 @@
 import { mapState } from 'vuex'
 
 export default {
+  fetch({ store, redirect, query }) {
+    return store.dispatch('auth/check').then(user => {
+      console.log('login fetch', user)
+      if (user) return redirect('/app/', query)
+    })
+  },
   data() {
     return {
       email: '',
@@ -58,12 +64,6 @@ export default {
   },
   computed: {
     ...mapState('auth', ['user']),
-  },
-  fetch({ store, redirect, query }) {
-    return store.dispatch('auth/check').then(user => {
-      console.log('login fetch', user)
-      if (user) return redirect('/app/', query)
-    })
   },
   created() {
     //

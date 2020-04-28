@@ -88,7 +88,9 @@ export default {
     },
     loaders: {
       less: {
-        javascriptEnabled: true,
+        lessOptions:{
+          javascriptEnabled: true,
+        }
       },
     },
     /*
