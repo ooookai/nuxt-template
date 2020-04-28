@@ -30,6 +30,9 @@ export default {
     '@/assets/css/animate.css',
     '@fortawesome/fontawesome-svg-core/styles.css',
   ],
+  purgeCSS: {
+    whitelistPatterns: [/svg.*/, /(^|\.)fa-/, /-fa($|\.)/, /(^|\.)ant-/],
+  },
   /*
    ** Plugins to load before mounting the App
    */
