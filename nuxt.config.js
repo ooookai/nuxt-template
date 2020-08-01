@@ -96,10 +96,7 @@ export default {
    */
   build: {
     // improve build speed (beta)
-    // parallel: true,
     cache: true,
-    // hardSource: true,
-    // // //
 
     postcss: {
       plugins: {
