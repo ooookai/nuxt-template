@@ -5,11 +5,12 @@
         <span class="title">
           {{ title }}
         </span>
-        <a-icon
+        <span
           class="close animated rollIn faster"
-          type="close"
           @click.stop="() => $emit('close')"
-        />
+        >
+          <fa-icon icon="times-circle" />
+        </span>
       </div>
       <div class="body">
         <slot></slot>
