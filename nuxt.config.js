@@ -1,7 +1,17 @@
 export default {
+  /*
+   ** Nuxt rendering mode
+   ** See https://nuxtjs.org/api/configuration-mode
+   */
   mode: 'spa',
   /*
+   ** Nuxt target
+   ** See https://nuxtjs.org/api/configuration-target
+   */
+  target: 'static',
+  /*
    ** Headers of the page
+   ** See https://nuxtjs.org/api/configuration-head
    */
   head: {
     title: process.env.npm_package_name || '',
@@ -30,11 +40,9 @@ export default {
     '@/assets/css/animate.css',
     '@fortawesome/fontawesome-svg-core/styles.css',
   ],
-  purgeCSS: {
-    whitelistPatterns: [/svg.*/, /(^|\.)fa-/, /-fa($|\.)/, /(^|\.)ant-/],
-  },
   /*
    ** Plugins to load before mounting the App
+   ** https://nuxtjs.org/guide/plugins
    */
   plugins: [
     // '@/plugins/_',
@@ -42,6 +50,12 @@ export default {
     '@/plugins/vue-rx',
     '@/plugins/fa-icon',
   ],
+  /*
+   ** Auto import components
+   ** See https://nuxtjs.org/api/configuration-components
+   */
+  components: true,
+
   /*
    ** Nuxt.js modules
    */
@@ -71,8 +85,14 @@ export default {
    ** See https://axios.nuxtjs.org/options
    */
   axios: {},
+
+  generate: {
+    fallback: true, // ref: https://nuxtjs.org/faq/netlify-deployment/#for-site-generated-in-spa-mode
+  },
+
   /*
    ** Build configuration
+   ** See https://nuxtjs.org/api/configuration-build/
    */
   build: {
     // improve build speed (beta)
@@ -88,9 +108,7 @@ export default {
     },
     loaders: {
       less: {
-        lessOptions:{
-          javascriptEnabled: true,
-        }
+        javascriptEnabled: true,
       },
     },
     /*
@@ -98,6 +116,9 @@ export default {
      */
     extend(config, ctx) {
       //
+
+      // @see https://github.com/nuxt/nuxt.js/pull/3480#issuecomment-404150387
+      if (ctx.isDev) config.output.globalObject = 'this'
     },
   },
 }
