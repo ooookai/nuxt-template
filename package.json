@@ -23,6 +23,7 @@
     "lodash": "^4.17.19",
     "nuxt": "^2.14.0",
     "rxjs": "^6.5.5",
+    "twemoji": "^13.0.1",
     "vue-rx": "^6.2.0"
   },
   "devDependencies": {
