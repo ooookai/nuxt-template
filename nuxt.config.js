@@ -35,7 +35,6 @@ export default {
    */
   css: [
     // css files
-    '@/assets/less/antd.less',
     '@/assets/css/tailwind.css',
     '@/assets/css/animate.css',
     '@fortawesome/fontawesome-svg-core/styles.css',
@@ -46,7 +45,6 @@ export default {
    */
   plugins: [
     // '@/plugins/_',
-    '@/plugins/antd-ui',
     '@/plugins/vue-rx',
     '@/plugins/fa-icon',
   ],
@@ -101,13 +99,6 @@ export default {
     postcss: {
       plugins: {
         'postcss-nested': {},
-      },
-    },
-    loaders: {
-      less: {
-        lessOptions: {
-          javascriptEnabled: true,
-        },
       },
     },
     /*

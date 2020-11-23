@@ -33,7 +33,6 @@ body {
   user-select: none;
 }
 
-i.anticon,
 span,
 label {
   vertical-align: middle;
