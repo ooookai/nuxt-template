@@ -50,6 +50,7 @@ export default {
     // '@/plugins/_',
     '@/plugins/vue-rx',
     '@/plugins/fa-icon',
+    '@/plugins/vuefire',
     '@/plugins/twemoji',
   ],
   /*
