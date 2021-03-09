@@ -1,3 +1,6 @@
+const title = 'title' || process.env.npm_package_name
+const desc = 'desc' || process.env.npm_package_description
+
 export default {
   /*
    ** Nuxt rendering mode
@@ -14,7 +17,7 @@ export default {
    ** See https://nuxtjs.org/api/configuration-head
    */
   head: {
-    title: process.env.npm_package_name || '',
+    title,
     meta: [
       { charset: 'utf-8' },
       {
@@ -24,7 +27,7 @@ export default {
       {
         hid: 'description',
         name: 'description',
-        content: process.env.npm_package_description || '',
+        content: desc,
       },
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
@@ -88,6 +91,22 @@ export default {
    ** See https://axios.nuxtjs.org/options
    */
   axios: {},
+
+  /*
+   ** PWA module configuration
+   ** See https://pwa.nuxtjs.org/
+   */
+  pwa: {
+    meta: {
+      name: title,
+      description: desc,
+      theme_color: '#000000',
+    },
+    manifest: {
+      name: title,
+      short_name: title,
+    },
+  },
 
   generate: {
     fallback: true, // ref: https://nuxtjs.org/faq/netlify-deployment/#for-site-generated-in-spa-mode
