@@ -92,6 +92,6 @@ label {
 
 <style lang="postcss" scoped>
 .default-layout {
-  @apply h-screen w-screen flex justify-center items-center text-center overflow-hidden;
+  @apply h-full w-full flex justify-center items-center text-center overflow-hidden;
 }
 </style>
