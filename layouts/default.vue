@@ -1,5 +1,5 @@
 <template>
-  <nuxt class="default-layout" />
+  <nuxt class="layout-default" />
 </template>
 
 <style>
@@ -91,7 +91,7 @@ label {
 </style>
 
 <style lang="postcss" scoped>
-.default-layout {
+.layout-default {
   @apply h-full w-full flex justify-center items-center text-center overflow-hidden;
 }
 </style>
