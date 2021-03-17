@@ -40,10 +40,13 @@ export default {
    ** Global CSS
    */
   css: [
-    // css files
+    // libs files
     '@/assets/css/tailwind.css',
     '@/assets/css/animate.css',
     '@fortawesome/fontawesome-svg-core/styles.css',
+    // main files
+    '@/assets/css/main.css',
+    '@/assets/scss/main.scss',
   ],
   /*
    ** Plugins to load before mounting the App
@@ -69,7 +72,6 @@ export default {
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
-    '@nuxtjs/style-resources',
   ],
 
   /*
@@ -80,11 +82,12 @@ export default {
     '@nuxtjs/eslint-module',
     // Doc: https://github.com/nuxt-community/nuxt-tailwindcss
     '@nuxtjs/tailwindcss',
+    // Doc: https://github.com/nuxt-community/style-resources-module
+    '@nuxtjs/style-resources',
   ],
 
   styleResources: {
     // :warning: You cannot use path aliases here (~ and @)
-    scss: ['./assets/scss/*.scss'],
   },
   /*
    ** Axios module configuration
