@@ -10,6 +10,8 @@
     "dev": "nuxt --config-file localhost/nuxt.config.js",
     "build": "nuxt build",
     "start": "nuxt start",
+    "gd": "yarn generate && firebase deploy --only hosting",
+    "gdev": "yarn generate && firebase hosting:channel:deploy dev",
     "generate": "nuxt generate"
   },
   "dependencies": {
