@@ -45,7 +45,7 @@ export default {
 }
 
 .start {
-  @apply bg-orange-400 text-white font-bold py-2 px-6 rounded cursor-pointer my-8;
+  @apply bg-indigo-400 text-white font-bold py-2 px-6 rounded cursor-pointer my-8;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 </style>
